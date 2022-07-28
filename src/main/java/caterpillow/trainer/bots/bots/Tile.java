@@ -1,10 +1,8 @@
-package caterpillow.trainer.bots.testing;
+package caterpillow.trainer.bots.bots;
 
 import caterpillow.AimTrainer;
-import caterpillow.trainer.bots.BotInfo;
-import caterpillow.trainer.bots.BotReflectionCrap;
+import caterpillow.trainer.bots.Bot;
 import caterpillow.trainer.scenarios.ScenarioPlayer;
-import caterpillow.trainer.util.PositionUtils;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.BlockPos;
@@ -13,28 +11,18 @@ import net.minecraft.util.Vec3;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Tile {
+public class Tile extends Bot {
 
-    private ScenarioPlayer scenarioPlayer;
-
-    public int botNumber;
 
     public ArrayList<BlockPos> getSpawnpoints() {
         return spawnpoints;
     }
 
-    public ArrayList<BlockPos> spawnpoints;
-    public ArrayList<BlockPos> availableSpawns;
-    public Vec3 position;
-    private BotInfo botInfo;
-    private BotReflectionCrap botReflectionCrap;
     Random generator;
     IBlockState iBlockState;
 
-    public Tile(ScenarioPlayer scenarioPlayer, caterpillow.trainer.bots.BotReflectionCrap botReflectionCrap, int botNumber) {
-        this.scenarioPlayer = scenarioPlayer;
-        this.botNumber = botNumber;
-        this.botReflectionCrap = botReflectionCrap;
+    public Tile(ScenarioPlayer scenarioPlayer, int botNumber) {
+        super(scenarioPlayer, botNumber);
     }
 
     public void start() {
@@ -56,13 +44,12 @@ public class Tile {
     }
 
     public void spawn() {
-        this.availableSpawns = new ArrayList<>(spawnpoints);
-        for (BlockPos pos : scenarioPlayer.takenBlocks) {
-            availableSpawns.removeIf(blockPos -> PositionUtils.isPosEqual(blockPos, pos));
-        }
+        System.out.println(spawnpoints);
+        System.out.println(scenarioPlayer);
+        System.out.println(scenarioPlayer.availableBlocks);
         // grabs a random available spawnspot
-        int index = generator.nextInt(availableSpawns.size());
-        BlockPos newPos = availableSpawns.get(index);
+        int index = generator.nextInt(scenarioPlayer.availableBlocks.size());
+        BlockPos newPos = scenarioPlayer.availableBlocks.get(index);
 
         // sets the old block to its original form
         if (position != null)
@@ -73,21 +60,16 @@ public class Tile {
 
         // updates scenarioplayer's taken blocks
         if (position != null)
-            scenarioPlayer.updateTakenBlocks(new BlockPos(position), newPos);
+            scenarioPlayer.updateAvailableBlocks(new BlockPos(position), newPos);
         else
-            scenarioPlayer.updateTakenBlocks(null, newPos);
+            scenarioPlayer.updateAvailableBlocks(null, newPos);
 
         // sets the new block to the target
         Minecraft.getMinecraft().getIntegratedServer().getEntityWorld().setBlockState(newPos, AimTrainer.instance.settingsManager.getTargetBlockState());
 
 
-
         // sets the position field to the new position
         position = new Vec3(newPos.getX(), newPos.getY(), newPos.getZ());
-    }
-
-    public void setReflectionObject(BotReflectionCrap botReflectionCrap) {
-        this.botReflectionCrap = botReflectionCrap;
     }
 
 }

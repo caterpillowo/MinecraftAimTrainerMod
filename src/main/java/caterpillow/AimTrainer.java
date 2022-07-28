@@ -53,10 +53,10 @@ public class AimTrainer {
     }
 
     public AimTrainer() {
+        this.fileManager = new FileManager();
         this.commandManager = new CommandManager();
         this.settingsManager = new SettingsManager();
         this.scenarioManager = new ScenarioManager();
-        this.fileManager = new FileManager();
 
     }
 

@@ -1,7 +1,7 @@
 package caterpillow.trainer.bots;
 
 public class DefaultBots {
-    public static final String TILE =
+    private static final String TILE =
             "package caterpillow.trainer.bots.testing;\n" +
                     "\n" +
                     "import caterpillow.AimTrainer;\n" +

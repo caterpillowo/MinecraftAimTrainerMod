@@ -10,7 +10,6 @@ buildscript {
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
-//        classpath files('libs/jnativehook-2.1.0.jar')
     }
 }
 apply plugin: 'net.minecraftforge.gradle.forge'

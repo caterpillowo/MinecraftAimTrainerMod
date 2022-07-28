@@ -2,11 +2,9 @@ package caterpillow.trainer.scenarios;
 
 import caterpillow.AimTrainer;
 import caterpillow.trainer.bots.BotInfo;
-import caterpillow.trainer.bots.DefaultBots;
+import caterpillow.trainer.map.MapInfo;
 import caterpillow.trainer.util.Renderer;
 import caterpillow.trainer.util.files.FileManager;
-import caterpillow.trainer.map.MapInfo;
-import caterpillow.trainer.util.javaisdumb.Pair;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
@@ -19,6 +17,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
 import java.awt.*;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 
 public class ScenarioCreator {
@@ -186,7 +185,7 @@ public class ScenarioCreator {
                     int yDiff = maxPos.getY() - minPos.getY() + 1;
                     int zDiff = maxPos.getZ() - minPos.getZ() + 1;
 
-                    ArrayList<Pair> blockList = new ArrayList<>();
+                    ArrayList<SimpleEntry> blockList = new ArrayList<>();
 
                     for (int x = 0; x < xDiff; x++) {
                         for (int y = 0; y < yDiff; y++) {
@@ -202,7 +201,7 @@ public class ScenarioCreator {
 
                                 int meta = block.getMetaFromState(blockState);
 
-                                blockList.add(new Pair(block.getRegistryName().split(":")[1], meta));
+                                blockList.add(new SimpleEntry(block.getRegistryName().split(":")[1], meta));
 
                             }
                         }
@@ -235,7 +234,7 @@ public class ScenarioCreator {
         });
 
         // stage 3: select what bot type to use
-        stages.add(new Stage("Bot Type", "Please enter a number between 1 and 1 to choose the type of bot you would like. Do /confirm to confirm.") {
+        stages.add(new Stage("Bot Type", "Please enter the name of the bot type (only \"Tile\" for now). Do /confirm to confirm.") {
             @Override
             public void start() {
                 scenario.setBotInfo(new BotInfo());
@@ -246,16 +245,7 @@ public class ScenarioCreator {
             @Override
             public boolean confirm() {
                 if (!messages.isEmpty()) {
-                    try {
-                        botType = Integer.parseInt(messages.get(0));
-                    } catch (Exception e) {
-                        printToChatRed("Please type a valid number in chat.");
-                    }
-                    switch (botType) {
-                        case 1:
-                            scenario.getBotInfo().botCode = DefaultBots.TILE;
-                            break;
-                    }
+                    scenario.getBotInfo().botType = messages.get(0);
                     return true;
                 } else {
                     printToChatRed("Please type a valid number in chat.");
@@ -293,7 +283,7 @@ public class ScenarioCreator {
         // TODO: need to add check to make sure there arent more bots than spawn places
         stages.add(new Stage("Set Bot Spawn Regions (Bot Type 1)", "Do commands /pos1 and /pos2 to set a region. Do /add to add selected region. Do /confirm to add region and end.") {
 
-            ArrayList<Pair<BlockPos, BlockPos>> spawnRegions = new ArrayList<>();
+            ArrayList<SimpleEntry<BlockPos, BlockPos>> spawnRegions = new ArrayList<>();
 
             private BlockPos pos1;
             private BlockPos pos2;
@@ -315,12 +305,12 @@ public class ScenarioCreator {
                 pos1 = AimTrainer.instance.commandManager.pos1;
                 pos2 = AimTrainer.instance.commandManager.pos2;
                 if (minPos != null && pos1 != null && pos2 != null) {
-                    // adds a pair of coordinates relative to the minPos
+                    // adds a Entry of coordinates relative to the minPos
 
                     BlockPos minPos1 = new BlockPos(Math.min(pos1.getX(), pos2.getX()), Math.min(pos1.getY(), pos2.getY()), Math.min(pos1.getZ(), pos2.getZ()));
                     BlockPos maxPos2 = new BlockPos(Math.max(pos1.getX(), pos2.getX()), Math.max(pos1.getY(), pos2.getY()), Math.max(pos1.getZ(), pos2.getZ()));
 
-                    scenario.getBotInfo().spawnRegions.add(new Pair<>(minPos1.subtract(minPos), maxPos2.subtract(minPos)));
+                    scenario.getBotInfo().spawnRegions.add(new SimpleEntry<>(minPos1.subtract(minPos), maxPos2.subtract(minPos)));
                     printToChatGreen("Added region " + minPos1.subtract(minPos) + " to " + maxPos2.subtract(minPos));
                     AimTrainer.instance.commandManager.pos1 = null;
                     AimTrainer.instance.commandManager.pos2 = null;
@@ -334,11 +324,11 @@ public class ScenarioCreator {
                 pos1 = AimTrainer.instance.commandManager.pos1;
                 pos2 = AimTrainer.instance.commandManager.pos2;
                 if (minPos != null && pos1 != null && pos2 != null) {
-                    // adds a pair of coordinates relative to the minPos
+                    // adds a Entry of coordinates relative to the minPos
                     BlockPos minPos1 = new BlockPos(Math.min(pos1.getX(), pos2.getX()), Math.min(pos1.getY(), pos2.getY()), Math.min(pos1.getZ(), pos2.getZ()));
                     BlockPos maxPos2 = new BlockPos(Math.max(pos1.getX(), pos2.getX()), Math.max(pos1.getY(), pos2.getY()), Math.max(pos1.getZ(), pos2.getZ()));
 
-                    scenario.getBotInfo().spawnRegions.add(new Pair<>(minPos1.subtract(minPos), maxPos2.subtract(minPos)));
+                    scenario.getBotInfo().spawnRegions.add(new SimpleEntry<>(minPos1.subtract(minPos), maxPos2.subtract(minPos)));
                     printToChatGreen("Added region " + minPos1.subtract(minPos) + " to " + maxPos2.subtract(minPos));
                     AimTrainer.instance.commandManager.pos1 = null;
                     AimTrainer.instance.commandManager.pos2 = null;

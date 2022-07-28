@@ -1,30 +1,19 @@
 package caterpillow.trainer.scenarios;
 
-import caterpillow.trainer.bots.BotReflectionCrap;
-import caterpillow.trainer.bots.DefaultBots;
-import caterpillow.trainer.bots.testing.Tile;
-import caterpillow.trainer.util.files.BotCompiler;
-import caterpillow.trainer.util.files.ClassInfo;
-import caterpillow.trainer.util.files.Javac;
-import caterpillow.trainer.util.javaisdumb.Pair;
+import caterpillow.trainer.bots.Bot;
+import caterpillow.trainer.bots.bots.Tile;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.ChatComponentText;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import scala.collection.script.Message;
 
-import java.io.ByteArrayInputStream;
-import java.io.ObjectInputStream;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Modifier;
-import java.lang.reflect.Parameter;
+import java.lang.reflect.InvocationTargetException;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 
 public class ScenarioLoader {
 
@@ -36,6 +25,8 @@ public class ScenarioLoader {
 
     private BlockPos player;
 
+    private HashMap<String, Class> botClasses;
+
     public ScenarioLoader(Scenario scenario) {
         this.scenario = scenario;
 
@@ -43,11 +34,16 @@ public class ScenarioLoader {
 
         player = new BlockPos(Minecraft.getMinecraft().thePlayer).down().west().south();
 
+        botClasses = new HashMap<>();
+
+        botClasses.put(Tile.class.getSimpleName(), Tile.class);
+
         loadMap();
 
         loadBots();
 
         scenarioPlayer.start();
+
     }
 
     private void loadMap() {
@@ -63,12 +59,12 @@ public class ScenarioLoader {
         int count = 0;
 
 
-        ArrayList<Pair> blockList = scenario.getMapInfo().getBlockList();
+        ArrayList<SimpleEntry> blockList = scenario.getMapInfo().getBlockList();
 
         for (int x = player.getX(); x < xDimension + player.getX(); x++) {
             for (int y = player.getY(); y < yDimension + player.getY(); y++) {
                 for (int z = player.getZ(); z < zDimension + player.getZ(); z++) {
-                    Minecraft.getMinecraft().getIntegratedServer().getEntityWorld().setBlockState(new BlockPos(x, y, z), pairToState(blockList.get(count)));
+                    Minecraft.getMinecraft().getIntegratedServer().getEntityWorld().setBlockState(new BlockPos(x, y, z), SimpleEntryToState(blockList.get(count)));
                     count++;
                 }
             }
@@ -91,48 +87,19 @@ public class ScenarioLoader {
     }
 
     private boolean createBots() {
+        Constructor<Bot> botConstructor = null;
         try {
-//            Class<?> compiledBotClass = BotCompiler.getBotFromSource(scenario.getBotInfo().botCode);
-//            Class<?> compiledBotClass = BotCompiler.getBotFromSource(DefaultBots.TILE);
-
-            List<ClassInfo> classInfoList = Javac.compile(Arrays.asList(DefaultBots.TILE));
-
-            IHateJava iHateJava = new IHateJava();
-            iHateJava.setByte(classInfoList.get(0).bytes);
-            Class compiledBotClass = iHateJava.findClass(classInfoList.get(0).className);
-
-
+            botConstructor = botClasses.get(scenario.getBotInfo().botType).getConstructor(ScenarioPlayer.class, int.class);
             for (int botNumber = 0; botNumber < scenario.getBotInfo().botCount; botNumber++) {
-                BotReflectionCrap botReflectionCrap = new BotReflectionCrap();
-
-//                System.out.println(Arrays.deepToString(compiledBotClass.getDeclaredConstructors()));
-//                System.out.println(compiledBotClass.getConstructors()[0].getParameterTypes());
-//                Class<?>[] parameters = compiledBotClass.getConstructors()[0].getParameterTypes();
-//                System.out.println(Arrays.deepToString(compiledBotClass.getConstructors()[0].getParameters()));
-//                System.out.println(Modifier.toString(compiledBotClass.getConstructors()[0].getModifiers()));
-//                System.out.println(parameters[0].isAssignableFrom(ScenarioPlayer.class));
-//
-//                Constructor constructor = compiledBotClass.getDeclaredConstructor(new Class<?>[]{ScenarioPlayer.class, BotReflectionCrap.class, int.class}); //ScenarioPlayer.class, BotReflectionCrap.class, int.class
-//                Object bot = constructor.newInstance(scenarioPlayer, botReflectionCrap, botNumber); //scenarioPlayer, botReflectionCrap, botNumber
-
-
-                Constructor constructor = Tile.class.getDeclaredConstructor(ScenarioPlayer.class, BotReflectionCrap.class, int.class);
-                Object bot = constructor.newInstance(scenarioPlayer, botReflectionCrap, botNumber);
-
-
-                botReflectionCrap.setObj(bot);
                 System.out.println(scenarioPlayer);
-                this.scenarioPlayer
-                        .botList.add(
-                        new Pair<>(
-                                bot,
-                                botReflectionCrap));
+                this.scenarioPlayer.botList.add(botConstructor.newInstance(scenarioPlayer, botNumber));
             }
             return true;
-        } catch (Exception e) {
+        } catch (NoSuchMethodException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
             return false;
         }
+
     }
 
 //    private Constructor getConstructorWhatAmIDoing() {
@@ -141,13 +108,13 @@ public class ScenarioLoader {
 
     private void loadBots() {
 
-        ArrayList<Pair<BlockPos, BlockPos>> spawnRegions = scenario.getBotInfo().spawnRegions;
+        ArrayList<SimpleEntry<BlockPos, BlockPos>> spawnRegions = scenario.getBotInfo().spawnRegions;
 
         ArrayList<BlockPos> spawnpoints = new ArrayList<>();
 
-        for (Pair<BlockPos, BlockPos> pair : spawnRegions) {
-            BlockPos minPos = pair.getKey().add(player);
-            BlockPos maxPos = pair.getValue().add(player);
+        for (SimpleEntry<BlockPos, BlockPos> SimpleEntry : spawnRegions) {
+            BlockPos minPos = SimpleEntry.getKey().add(player);
+            BlockPos maxPos = SimpleEntry.getValue().add(player);
 
             for (int x = minPos.getX(); x < maxPos.getX() + 1; x++) {
                 for (int y = minPos.getY(); y < maxPos.getY() + 1; y++) {
@@ -163,18 +130,20 @@ public class ScenarioLoader {
             //TODO: MAKE IT STOP IF IT CRASHES LMAO
         }
 
-        for (Pair<Object, BotReflectionCrap> pair : scenarioPlayer.botList) {
-            pair.getValue().setSpawnpoints(spawnpoints);
+        scenarioPlayer.availableBlocks = new ArrayList<>(spawnpoints);
+
+        for (Bot SimpleEntry : scenarioPlayer.botList) {
+            SimpleEntry.setSpawnpoints(spawnpoints);
         }
 
     }
 
 
-    private IBlockState pairToState(Pair pair) {
-        if (!blockTable.containsKey(pair.getKey())) {
-            blockTable.put((String) pair.getKey(), GameRegistry.findBlock("minecraft", (String) pair.getKey()));
+    private IBlockState SimpleEntryToState(SimpleEntry SimpleEntry) {
+        if (!blockTable.containsKey(SimpleEntry.getKey())) {
+            blockTable.put((String) SimpleEntry.getKey(), GameRegistry.findBlock("minecraft", (String) SimpleEntry.getKey()));
         }
-        return blockTable.get((String) pair.getKey()).getStateFromMeta(((Double) pair.getValue()).intValue());
+        return blockTable.get((String) SimpleEntry.getKey()).getStateFromMeta(((Double) SimpleEntry.getValue()).intValue());
     }
 
 

@@ -1,265 +1,89 @@
-[21:13:46] [Client thread/INFO]: Setting user: Player602
-[21:13:51] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:14:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:AimTrainer
-[21:14:01] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:14:01] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[21:14:01] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:14:01] [Thread-9/INFO]: OpenAL initialized.
-[21:14:01] [Sound Library Loader/INFO]: Sound engine started
-[21:14:15] [Client thread/INFO]: Created: 16x16 textures-atlas
-[21:14:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:AimTrainer
-[21:14:17] [Client thread/INFO]: SoundSystem shutting down...
-[21:14:17] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[21:14:17] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:14:18] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[21:14:18] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:14:18] [Thread-11/INFO]: OpenAL initialized.
-[21:14:18] [Sound Library Loader/INFO]: Sound engine started
-[21:14:26] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:15:19] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
-[21:15:19] [Server thread/INFO]: Generating keypair
-[21:15:19] [Server thread/INFO]: Preparing start region for level 0
-[21:15:20] [Server thread/INFO]: Preparing spawn area: 72%
-[21:15:21] [Server thread/INFO]: Changing view distance to 3, from 10
-[21:15:23] [Server thread/INFO]: Player602[local:E:e3bcb4ab] logged in with entity id 448 at (365.1860776250495, 122.74848797749725, 441.63992583108825)
-[21:15:23] [Server thread/INFO]: Player602 joined the game
-[21:15:26] [Server thread/INFO]: Saving and pausing game...
-[21:15:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:15:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:15:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:15:31] [Server thread/INFO]: Changing view distance to 12, from 3
-[21:15:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3152ms behind, skipping 63 tick(s)
-[21:16:48] [Server thread/INFO]: Saving and pausing game...
-[21:16:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:16:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:16:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:17:02] [Server thread/INFO]: Saving and pausing game...
-[21:17:02] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:02] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:02] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:17:41] [Server thread/INFO]: Saving and pausing game...
-[21:17:41] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:41] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:41] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:17:49] [Server thread/INFO]: Saving and pausing game...
-[21:17:49] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:49] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:49] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:17:53] [Server thread/INFO]: Saving and pausing game...
-[21:17:53] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:17:53] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:17:53] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:18:16] [Server thread/INFO]: Saving and pausing game...
-[21:18:16] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:18:16] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:18:16] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:18:20] [Server thread/INFO]: Saving and pausing game...
-[21:18:20] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:18:20] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:18:20] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:18:27] [Server thread/INFO]: Saving and pausing game...
-[21:18:27] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:18:27] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:18:27] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:20:06] [Client thread/INFO]: [CHAT] §aType a name into chat for the scenario you are creating. Do /confirm to confirm.
-[21:20:11] [Server thread/INFO]: <Player602> showcase1
-[21:20:11] [Client thread/INFO]: [CHAT] <Player602> showcase1
-[21:20:14] [Client thread/INFO]: [CHAT] §aPlease select two opposing corners of your map using /pos1 and /pos2. Do /confirm to confirm.
-[21:20:15] [Client thread/INFO]: [CHAT] Pos1 set to 435, 83, 278
-[21:20:18] [Client thread/INFO]: [CHAT] Pos2 set to 430, 88, 272
-[21:20:20] [Client thread/INFO]: [CHAT] §aminPos: 430, 83, 272
-[21:20:20] [Client thread/INFO]: [CHAT] §amaxPos: 435, 88, 278
-[21:20:20] [Client thread/INFO]: [CHAT] §aPlease enter a number between 1 and 1 to choose the type of bot you would like. Do /confirm to confirm.
-[21:20:22] [Server thread/INFO]: <Player602> 1
-[21:20:22] [Client thread/INFO]: [CHAT] <Player602> 1
-[21:20:23] [Client thread/INFO]: [CHAT] §aType how many bots you want. Do /confirm to confirm.
-[21:20:25] [Server thread/INFO]: <Player602> 3
-[21:20:25] [Client thread/INFO]: [CHAT] <Player602> 3
-[21:20:27] [Client thread/INFO]: [CHAT] §aDo commands /pos1 and /pos2 to set a region. Do /add to add selected region. Do /confirm to add region and end.
-[21:20:31] [Client thread/INFO]: [CHAT] Pos1 set to 430, 88, 272
-[21:20:34] [Client thread/INFO]: [CHAT] Pos2 set to 435, 84, 272
-[21:20:36] [Client thread/INFO]: [CHAT] §aAdded region BlockPos{x=0, y=1, z=0} to BlockPos{x=5, y=5, z=0}
-[21:20:45] [Client thread/INFO]: [CHAT] §aLoading scenario showcase1
-[21:20:45] [Client thread/INFO]: [CHAT] §aScenario loaded showcase1
-[21:20:45] [Client thread/INFO]: [CHAT] §aBuilding map for showcase1 - Player602
-[21:20:58] [Server thread/INFO]: Saving and pausing game...
-[21:20:58] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:20:58] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:20:58] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:22:00] [Client thread/INFO]: [CHAT] §aLoading scenario showcase1
-[21:22:00] [Client thread/INFO]: [CHAT] §aScenario reloaded showcase1
-[21:22:00] [Client thread/INFO]: [CHAT] §aBuilding map for showcase1 - Player602
-[21:22:10] [Server thread/INFO]: Saving and pausing game...
-[21:22:10] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:22:10] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:22:10] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:23:08] [Client thread/INFO]: [CHAT] §aLoading scenario showcase1
-[21:23:08] [Client thread/INFO]: [CHAT] §aScenario reloaded showcase1
-[21:23:08] [Client thread/INFO]: [CHAT] §aBuilding map for showcase1 - Player602
-[21:23:40] [Server thread/INFO]: Player602 has just earned the achievement [Taking Inventory]
-[21:23:40] [Client thread/INFO]: [CHAT] Player602 has just earned the achievement [Taking Inventory]
-[21:24:08] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[21:24:10] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[21:24:17] [Server thread/INFO]: Saving and pausing game...
-[21:24:17] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:24:17] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:24:17] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:24:47] [Client thread/INFO]: [CHAT] §aType a name into chat for the scenario you are creating. Do /confirm to confirm.
-[21:24:52] [Server thread/INFO]: <Player602> showcase2
-[21:24:52] [Client thread/INFO]: [CHAT] <Player602> showcase2
-[21:24:54] [Client thread/INFO]: [CHAT] §aPlease select two opposing corners of your map using /pos1 and /pos2. Do /confirm to confirm.
-[21:25:18] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[21:25:20] [Client thread/INFO]: [CHAT] Pos1 set to 420, 89, 284
-[21:25:22] [Client thread/INFO]: [CHAT] Pos2 set to 415, 94, 288
-[21:25:24] [Client thread/INFO]: [CHAT] §aminPos: 415, 89, 284
-[21:25:24] [Client thread/INFO]: [CHAT] §amaxPos: 420, 94, 288
-[21:25:24] [Client thread/INFO]: [CHAT] §aPlease enter a number between 1 and 1 to choose the type of bot you would like. Do /confirm to confirm.
-[21:25:26] [Server thread/INFO]: <Player602> 1
-[21:25:26] [Client thread/INFO]: [CHAT] <Player602> 1
-[21:25:27] [Client thread/INFO]: [CHAT] §aType how many bots you want. Do /confirm to confirm.
-[21:25:29] [Server thread/INFO]: <Player602> 3
-[21:25:29] [Client thread/INFO]: [CHAT] <Player602> 3
-[21:25:31] [Client thread/INFO]: [CHAT] §aDo commands /pos1 and /pos2 to set a region. Do /add to add selected region. Do /confirm to add region and end.
-[21:25:33] [Client thread/INFO]: [CHAT] Pos1 set to 415, 90, 284
-[21:25:35] [Client thread/INFO]: [CHAT] Pos2 set to 415, 94, 288
-[21:25:37] [Client thread/INFO]: [CHAT] §aAdded region BlockPos{x=0, y=1, z=0} to BlockPos{x=0, y=5, z=4}
-[21:25:53] [Client thread/INFO]: [CHAT] §aLoading scenario showcase2
-[21:25:53] [Client thread/INFO]: [CHAT] §aScenario loaded showcase2
-[21:25:53] [Client thread/INFO]: [CHAT] §aBuilding map for showcase2 - Player602
-[21:26:06] [Server thread/INFO]: [Player602: Set the time to 1000]
-[21:26:06] [Client thread/INFO]: [CHAT] Set the time to 1000
-[21:26:14] [Server thread/INFO]: Saving and pausing game...
-[21:26:14] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:26:14] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:26:14] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:26:30] [Client thread/INFO]: [CHAT] §aType a name into chat for the scenario you are creating. Do /confirm to confirm.
-[21:26:33] [Server thread/INFO]: <Player602> showcase3
-[21:26:33] [Client thread/INFO]: [CHAT] <Player602> showcase3
-[21:27:03] [Client thread/INFO]: [CHAT] §aPlease select two opposing corners of your map using /pos1 and /pos2. Do /confirm to confirm.
-[21:27:05] [Client thread/INFO]: [CHAT] Pos1 set to 405, 83, 316
-[21:27:07] [Client thread/INFO]: [CHAT] Pos2 set to 401, 88, 309
-[21:27:09] [Client thread/INFO]: [CHAT] §aminPos: 401, 83, 309
-[21:27:09] [Client thread/INFO]: [CHAT] §amaxPos: 405, 88, 316
-[21:27:09] [Client thread/INFO]: [CHAT] §aPlease enter a number between 1 and 1 to choose the type of bot you would like. Do /confirm to confirm.
-[21:27:10] [Server thread/INFO]: <Player602> 1
-[21:27:10] [Client thread/INFO]: [CHAT] <Player602> 1
-[21:27:11] [Client thread/INFO]: [CHAT] §aType how many bots you want. Do /confirm to confirm.
-[21:27:12] [Server thread/INFO]: <Player602> 3
-[21:27:12] [Client thread/INFO]: [CHAT] <Player602> 3
-[21:27:13] [Client thread/INFO]: [CHAT] §aDo commands /pos1 and /pos2 to set a region. Do /add to add selected region. Do /confirm to add region and end.
-[21:27:16] [Client thread/INFO]: [CHAT] Pos1 set to 401, 88, 309
-[21:27:18] [Client thread/INFO]: [CHAT] Pos2 set to 405, 84, 309
-[21:27:20] [Client thread/INFO]: [CHAT] §aAdded region BlockPos{x=0, y=1, z=0} to BlockPos{x=4, y=5, z=0}
-[21:27:27] [Client thread/INFO]: [CHAT] §aLoading scenario showcase3
-[21:27:27] [Client thread/INFO]: [CHAT] §aScenario loaded showcase3
-[21:27:27] [Client thread/INFO]: [CHAT] §aBuilding map for showcase3 - Player602
-[21:27:58] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
-[21:28:02] [Client thread/INFO]: [CHAT] §aLoading scenario zombies3
-[21:28:06] [Client thread/INFO]: [CHAT] §aLoading scenario zombie3
-[21:28:06] [Client thread/INFO]: [CHAT] §aScenario loaded zombie3
-[21:28:06] [Client thread/INFO]: [CHAT] §aBuilding map for zombie3 - Player830
-[21:28:29] [Client thread/INFO]: [CHAT] §aLoading scenario gridshot
-[21:28:29] [Client thread/INFO]: [CHAT] §aScenario loaded gridshot
-[21:28:29] [Client thread/INFO]: [CHAT] An unknown error occurred while attempting to perform this command
-[21:28:31] [Client thread/INFO]: [CHAT] §aLoading scenario gridshot1
-[21:28:31] [Client thread/INFO]: [CHAT] §aScenario reloaded gridshot1
-[21:28:31] [Client thread/INFO]: [CHAT] §aBuilding map for gridshot1 - Player991
-[21:29:48] [Server thread/INFO]: Saving and pausing game...
-[21:29:48] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:29:48] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:29:48] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:30:04] [Client thread/INFO]: [CHAT] §aLoading scenario gridshot1
-[21:30:04] [Client thread/INFO]: [CHAT] §aScenario reloaded gridshot1
-[21:30:04] [Client thread/INFO]: [CHAT] §aBuilding map for gridshot1 - Player991
-[21:30:13] [Server thread/INFO]: Saving and pausing game...
-[21:30:13] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:30:13] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:30:13] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:30:14] [Server thread/INFO]: Saving and pausing game...
-[21:30:14] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:30:14] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:30:14] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:30:16] [Server thread/INFO]: Saving and pausing game...
-[21:30:16] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:30:16] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:30:16] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:30:18] [Server thread/INFO]: Changing view distance to 6, from 12
-[21:30:19] [Server thread/INFO]: Saving and pausing game...
-[21:30:19] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:30:19] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:30:19] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:30:21] [Server thread/INFO]: Saving and pausing game...
-[21:30:21] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:30:21] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:30:21] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:30:31] [Server thread/INFO]: Saving and pausing game...
-[21:30:31] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:30:31] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:30:31] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:31:40] [Server thread/INFO]: [Player602: Changing to clear weather]
-[21:31:40] [Client thread/INFO]: [CHAT] Changing to clear weather
-[21:31:42] [Server thread/INFO]: [Player602: Set the time to 1000]
-[21:31:42] [Client thread/INFO]: [CHAT] Set the time to 1000
-[21:33:10] [Server thread/INFO]: Saving and pausing game...
-[21:33:10] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:33:10] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:33:10] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:35:29] [Server thread/INFO]: Saving and pausing game...
-[21:35:29] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:35:29] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:35:29] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:38:33] [Server thread/INFO]: [Player602: Changing to clear weather]
-[21:38:33] [Client thread/INFO]: [CHAT] Changing to clear weather
-[21:39:13] [Server thread/INFO]: [Player602: Set the time to 1000]
-[21:39:13] [Client thread/INFO]: [CHAT] Set the time to 1000
-[21:39:24] [Server thread/INFO]: Saving and pausing game...
-[21:39:24] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:39:24] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:39:24] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:39:28] [Server thread/INFO]: Saving and pausing game...
-[21:39:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:39:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:39:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:39:35] [Server thread/INFO]: Saving and pausing game...
-[21:39:35] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:39:35] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:39:35] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:39:40] [Server thread/INFO]: Saving and pausing game...
-[21:39:40] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:39:40] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:39:40] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:39:43] [Server thread/INFO]: Saving and pausing game...
-[21:39:43] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:39:43] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:39:43] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:39:51] [Server thread/INFO]: [Player602: Set the time to 1000]
-[21:39:51] [Client thread/INFO]: [CHAT] Set the time to 1000
-[21:39:57] [Server thread/INFO]: [Player602: Set the time to 2000]
-[21:39:57] [Client thread/INFO]: [CHAT] Set the time to 2000
-[21:41:26] [Client thread/INFO]: [CHAT] Saved screenshot as 2021-10-18_21.41.26.png
-[21:41:30] [Server thread/INFO]: Saving and pausing game...
-[21:41:30] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:41:30] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:41:30] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:42:25] [Server thread/INFO]: Saving and pausing game...
-[21:42:25] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:42:25] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:42:25] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:42:40] [Client thread/INFO]: [CHAT] Saved screenshot as 2021-10-18_21.42.40.png
-[21:42:41] [Server thread/INFO]: Saving and pausing game...
-[21:42:41] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:42:41] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:42:41] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:42:59] [Server thread/INFO]: Saving and pausing game...
-[21:42:59] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:42:59] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:42:59] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:43:00] [Client thread/INFO]: Stopping!
-[21:43:00] [Client thread/INFO]: SoundSystem shutting down...
-[21:43:00] [Server thread/INFO]: Stopping server
-[21:43:00] [Server thread/INFO]: Saving players
-[21:43:00] [Server thread/INFO]: Saving worlds
-[21:43:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
-[21:43:00] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
-[21:43:00] [Server thread/INFO]: Saving chunks for level 'New World'/The End
-[21:43:01] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:32:58] [Client thread/INFO]: Setting user: Player618
+[11:33:01] [Client thread/INFO]: LWJGL Version: 2.9.2
+[11:33:06] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:AimTrainer
+[11:33:06] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:33:06] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[11:33:06] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:33:06] [Thread-8/INFO]: OpenAL initialized.
+[11:33:07] [Sound Library Loader/INFO]: Sound engine started
+[11:33:09] [Client thread/INFO]: Created: 16x16 textures-atlas
+[11:33:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:AimTrainer
+[11:33:10] [Client thread/INFO]: SoundSystem shutting down...
+[11:33:10] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[11:33:10] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[11:33:10] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[11:33:10] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[11:33:10] [Thread-10/INFO]: OpenAL initialized.
+[11:33:11] [Sound Library Loader/INFO]: Sound engine started
+[11:33:13] [Client thread/INFO]: Created: 512x512 textures-atlas
+[11:34:57] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[11:34:57] [Server thread/INFO]: Generating keypair
+[11:34:58] [Server thread/INFO]: Preparing start region for level 0
+[11:34:59] [Server thread/INFO]: Changing view distance to 6, from 10
+[11:35:00] [Server thread/INFO]: Player618[local:E:8d539a20] logged in with entity id 427 at (397.48294911316884, 109.31835627622459, 387.24423445130765)
+[11:35:00] [Server thread/INFO]: Player618 joined the game
+[11:35:06] [Client thread/INFO]: [CHAT] §aType a name into chat for the scenario you are creating. Do /confirm to confirm.
+[11:35:11] [Server thread/INFO]: <Player618> Gridshot
+[11:35:11] [Client thread/INFO]: [CHAT] <Player618> Gridshot
+[11:35:12] [Client thread/INFO]: [CHAT] §aPlease select two opposing corners of your map using /pos1 and /pos2. Do /confirm to confirm.
+[11:35:16] [Client thread/INFO]: [CHAT] Pos1 set to 392, 102, 388
+[11:35:22] [Client thread/INFO]: [CHAT] Pos2 set to 402, 108, 378
+[11:35:23] [Client thread/INFO]: [CHAT] §aminPos: 392, 102, 378
+[11:35:23] [Client thread/INFO]: [CHAT] §amaxPos: 402, 108, 388
+[11:35:23] [Client thread/INFO]: [CHAT] §aPlease enter the name of the bot type (only "Tile" for now). Do /confirm to confirm.
+[11:35:25] [Server thread/INFO]: <Player618> Tile
+[11:35:25] [Client thread/INFO]: [CHAT] <Player618> Tile
+[11:35:26] [Client thread/INFO]: [CHAT] §aType how many bots you want. Do /confirm to confirm.
+[11:35:27] [Server thread/INFO]: <Player618> 3
+[11:35:27] [Client thread/INFO]: [CHAT] <Player618> 3
+[11:35:30] [Client thread/INFO]: [CHAT] §aDo commands /pos1 and /pos2 to set a region. Do /add to add selected region. Do /confirm to add region and end.
+[11:35:49] [Client thread/INFO]: [CHAT] Pos1 set to 395, 103, 379
+[11:35:51] [Client thread/INFO]: [CHAT] Pos2 set to 399, 107, 379
+[11:35:52] [Client thread/INFO]: [CHAT] §aAdded region BlockPos{x=3, y=1, z=1} to BlockPos{x=7, y=5, z=1}
+[11:36:03] [Client thread/INFO]: [CHAT] §aLoading scenario Gridshot
+[11:36:03] [Client thread/INFO]: [CHAT] §aScenario loaded Gridshot
+[11:36:03] [Client thread/INFO]: [CHAT] §aBuilding map for Gridshot - Player618
+[11:36:20] [Server thread/INFO]: Saving and pausing game...
+[11:36:20] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:36:20] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:36:20] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:36:42] [Client thread/INFO]: [CHAT] §aLoading scenario Gridshot
+[11:36:42] [Client thread/INFO]: [CHAT] §aScenario reloaded Gridshot
+[11:36:42] [Client thread/INFO]: [CHAT] §aBuilding map for Gridshot - Player618
+[11:36:51] [Server thread/INFO]: Saving and pausing game...
+[11:36:51] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:36:51] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:36:51] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:36:57] [Server thread/INFO]: Saving and pausing game...
+[11:36:57] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:36:57] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:36:57] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:37:58] [Server thread/INFO]: Saving and pausing game...
+[11:37:58] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:37:58] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:37:58] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:38:36] [Server thread/INFO]: Saving and pausing game...
+[11:38:36] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:38:36] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:38:36] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:38:54] [Server thread/INFO]: Saving and pausing game...
+[11:38:54] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:38:54] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:38:54] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:42:00] [Server thread/INFO]: Saving and pausing game...
+[11:42:00] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:42:00] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:42:00] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:42:26] [Server thread/INFO]: Saving and pausing game...
+[11:42:26] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:42:26] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:42:26] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:42:28] [Server thread/INFO]: Stopping server
+[11:42:28] [Server thread/INFO]: Saving players
+[11:42:28] [Server thread/INFO]: Saving worlds
+[11:42:28] [Server thread/INFO]: Saving chunks for level 'New World'/Overworld
+[11:42:28] [Server thread/INFO]: Saving chunks for level 'New World'/Nether
+[11:42:28] [Server thread/INFO]: Saving chunks for level 'New World'/The End
+[11:42:29] [Client thread/INFO]: Stopping!
+[11:42:29] [Client thread/INFO]: SoundSystem shutting down...
+[11:42:29] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

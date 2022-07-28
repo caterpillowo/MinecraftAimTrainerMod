@@ -1,16 +1,17 @@
 package caterpillow.trainer.map;
 
-import caterpillow.trainer.util.javaisdumb.Pair;
 
+import java.util.AbstractMap;
+import java.util.AbstractMap.SimpleEntry;
 import java.util.ArrayList;
 
 public class MapInfo {
     private int x, y, z;
 
-    private ArrayList<Pair> blockList;
+    private ArrayList<SimpleEntry> blockList;
 
 
-    public MapInfo(int x, int y, int z, ArrayList<Pair> blockList) {
+    public MapInfo(int x, int y, int z, ArrayList<SimpleEntry> blockList) {
         this.x = x;
         this.y = y;
         this.z = z;
@@ -41,11 +42,11 @@ public class MapInfo {
         this.z = z;
     }
 
-    public ArrayList<Pair> getBlockList() {
+    public ArrayList<AbstractMap.SimpleEntry> getBlockList() {
         return blockList;
     }
 
-    public void setBlockList(ArrayList<Pair> blockList) {
+    public void setBlockList(ArrayList<SimpleEntry> blockList) {
         this.blockList = blockList;
     }
 }
