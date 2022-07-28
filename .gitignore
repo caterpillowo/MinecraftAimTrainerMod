@@ -1,3 +1,14 @@
 # Project exclude paths
 /.gradle/
 /build/
+/run/config/
+/run/crash-reports/
+/run/logs/
+/run/mods/
+/run/Pillow Aim Trainer old/
+/run/resourcepacks/
+/run/saves/
+/run/screenshots/
+/run/options.txt/
+/run/usercache.json/
+/run/usernamecache.json/
